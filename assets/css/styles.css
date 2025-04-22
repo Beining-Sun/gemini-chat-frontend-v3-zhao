@@ -6,7 +6,7 @@ body {
 
 .top-bar {
   display: flex;
-  font-family: cursive;
+  font-family: system-ui;
   height: 80px;
   justify-content: space-between;
   align-items: center;
