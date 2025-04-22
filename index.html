@@ -24,8 +24,8 @@
         <!-- 中间按钮组 -->
         <div class="top-bar-center">
             <button class="top-btn-current">Idea Analysis</button>
-            <button class="top-btn">KPI & Risks</button>
-            <button class="top-btn">Negotiator</button>
+            <button class="top-btn" id="kpi-btn">KPI & Risks</button>
+            <button class="top-btn" id="negotiator-btn">Negotiator</button>
         </div>
 
         <!-- 右侧 SVG 占位（圆形） -->
@@ -201,5 +201,20 @@ document.getElementById("avatar-button").addEventListener("click", () => {
     showCustomAlert(industry, region, audience);
 });
 
+document.getElementById("kpi-btn").addEventListener("click", () => {
+    const industry = encodeURIComponent(document.getElementById("industry").value);
+    const region = encodeURIComponent(document.getElementById("region").value);
+    const audience = encodeURIComponent(document.getElementById("audience").value);
+    const url = `https://beining-sun.github.io/gemini-chat-frontend-v3-lin/?industry=${industry}&region=${region}&audience=${audience}`;
+    window.location.href = url;
+  });
+
+document.getElementById("negotiator-btn").addEventListener("click", () => {
+    const industry = encodeURIComponent(document.getElementById("industry").value);
+    const region = encodeURIComponent(document.getElementById("region").value);
+    const audience = encodeURIComponent(document.getElementById("audience").value);
+    const url = `https://beining-sun.github.io/gemini-chat-frontend-v3-sun/?industry=${industry}&region=${region}&audience=${audience}`;
+    window.location.href = url;
+});
 </script>
 </html>
