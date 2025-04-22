@@ -1,1 +1,242 @@
+body {
+    background-color: #f5f7fa;
+    padding-bottom: 80px;
+}
 
+.top-bar {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0; /* 不加内边距可使 left/right 紧贴边缘 */
+  background-color: #f5f7fa;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.top-bar-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+
+
+.top-bar-right {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.top-bar-center {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly; /* 平均分布按钮 */
+  align-items: center;
+  margin-left:100px;
+  margin-right: 0px;
+}
+
+.top-btn-current {
+  font-size: 28px;
+  padding: 8px 15px;
+  background-color: #5A1EBA;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.top-btn {
+  font-size: 28px;
+  padding: 8px 15px;
+  color: black;
+  background-color: #f5f7fa;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.top-btn:hover {
+  background-color: #4a18a0;
+  color: white;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.card-header.custom-purple {
+    background-color: #5A1EBA;
+    color: white;
+}
+
+.card-header.custom-light-purple {
+    background-color: #E6E1F2;
+    color: white;
+}
+
+.btn.custom-purple {
+    background-color: #5A1EBA;
+    color: white;
+}
+
+.btn.custom-light-purple {
+    background-color: #E6E1F2;
+    color: white;
+}
+
+
+#ai-chat-button {
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#ai-chat-button:hover {
+    transform: scale(1.1);
+}
+
+#chat-messages {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+#chat-messages::-webkit-scrollbar-track { background: transparent; }
+#chat-messages::-webkit-scrollbar { width: 6px; }
+#chat-messages::-webkit-scrollbar-thumb {
+    background-color: #5A1EBA;
+    border-radius: 4px;
+    background-clip: content-box;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #5A1EBA;
+    color: white;
+    align-self: flex-end;
+    border-radius: 12px 12px 0 12px;
+    margin-left: auto;
+}
+
+.custom-alert-box {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 2px solid #5A1EBA;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  z-index: 1055;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+
+.ai-message {
+  background-color: white;
+  color: black;
+  align-self: flex-start;
+  border-radius: 12px 12px 12px 0;
+  margin-right: auto;
+  border: 2px solid #5A1EBA;
+}
+
+#avatar-button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    cursor: pointer;  /* 保留交互反馈 */
+}
+
+
+.loading-dots::after {
+    content: '...';
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+#analysis-results {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#analysis-results::-webkit-scrollbar-track { background: transparent; }
+#analysis-results::-webkit-scrollbar { width: 6px; }
+#analysis-results::-webkit-scrollbar-thumb {
+    background-color: #5A1EBA;
+    border-radius: 4px;
+    background-clip: content-box;
+}
+
+.business-plan-section {
+    display: none;
+}
+
+#business-plan-content {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#business-plan-content::-webkit-scrollbar-track { background: transparent; }
+#business-plan-content::-webkit-scrollbar { width: 6px; }
+#business-plan-content::-webkit-scrollbar-thumb {
+    background-color: #5A1EBA;
+    border-radius: 4px;
+    background-clip: content-box;
+}
+
+
+.markdown-content h1, 
+.markdown-content h2, 
+.markdown-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-content ul, 
+.markdown-content ol {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-content p {
+    margin-bottom: 1rem;
+}
