@@ -1,3 +1,7 @@
+* {
+  font-family: system-ui !important;
+}
+
 body {
     background-color: #f5f7fa;
     padding-bottom: 80px;
@@ -13,8 +17,8 @@ body {
   padding: 0 0; /* 不加内边距可使 left/right 紧贴边缘 */
   background-color: #f5f7fa;
   position: sticky;
-  top: 0;
   line-height: normal;
+  top: 0;
   z-index: 1000;
   margin-left: 20px;
   margin-top: 10px;
@@ -34,6 +38,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 .top-bar-center {
@@ -177,8 +183,8 @@ body {
 #avatar-button {
     background-color: transparent;
     border: none;
+    appearance: auto;
     box-shadow: none;
-    padding: 0;
     margin-bottom: 1px;
     cursor: pointer;  /* 保留交互反馈 */
 }
