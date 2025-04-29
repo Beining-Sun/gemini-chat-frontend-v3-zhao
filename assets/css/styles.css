@@ -183,11 +183,21 @@ body {
 #avatar-button {
     background-color: transparent;
     border: none;
-    appearance: auto;
     box-shadow: none;
-    margin-bottom: 1px;
-    cursor: pointer;  /* 保留交互反馈 */
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    line-height: 0; /* 避免字体/行高干扰 */
+    vertical-align: middle; /* 让按钮本身垂直居中 */
+    transform: translateY(-1px);
 }
+
 
 
 .loading-dots::after {
