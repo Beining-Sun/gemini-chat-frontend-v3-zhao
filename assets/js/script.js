@@ -114,17 +114,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // Generate PMF Analysis
-            const pmfPrompt = `Generate a Product-Market Fit (PMF) analysis for a business in the ${industry} industry targeting ${audience} in ${region}. Include sections for Market Demand, Consumer Behavior, and Competitive Landscape. Format the response in markdown with clear headings and bullet points. MAKE IT REALLY SHORT.`;
-            const pmfResult = await model.generateContent(pmfPrompt);
-            const pmfText = await pmfResult.response.text();
-            document.getElementById('pmf-analysis').innerHTML = marked.parse(pmfText);
+            // // Generate PMF Analysis
+            // const pmfPrompt = `Generate a Product-Market Fit (PMF) analysis for a business in the ${industry} industry targeting ${audience} in ${region}. Include sections for Market Demand, Consumer Behavior, and Competitive Landscape. Format the response in markdown with clear headings and bullet points. MAKE IT REALLY SHORT.`;
+            // const pmfResult = await model.generateContent(pmfPrompt);
+            // const pmfText = await pmfResult.response.text();
+            // document.getElementById('pmf-analysis').innerHTML = marked.parse(pmfText);
             
-            // Generate Case Studies
-            const caseStudyPrompt = `Provide 2-3 relevant case studies of successful businesses in the ${industry} industry targeting ${audience} in ${region}. For each case study, include the company name, key strategies, and lessons learned. Format the response in markdown with clear headings. MAKE IT REALLY SHORT.`;
-            const caseStudyResult = await model.generateContent(caseStudyPrompt);
-            const caseStudyText = await caseStudyResult.response.text();
-            document.getElementById('case-studies').innerHTML = marked.parse(caseStudyText);
+            // // Generate Case Studies
+            // const caseStudyPrompt = `Provide 2-3 relevant case studies of successful businesses in the ${industry} industry targeting ${audience} in ${region}. For each case study, include the company name, key strategies, and lessons learned. Format the response in markdown with clear headings. MAKE IT REALLY SHORT.`;
+            // const caseStudyResult = await model.generateContent(caseStudyPrompt);
+            // const caseStudyText = await caseStudyResult.response.text();
+            // document.getElementById('case-studies').innerHTML = marked.parse(caseStudyText);
             
             // Generate Evaluation
             const evaluationPrompt = `Evaluate the business idea of operating in ${industry} targeting ${audience} in ${region}. Provide a score out of 10 and detailed feedback on strengths, weaknesses, opportunities, and threats (SWOT analysis). Format the response in markdown with clear headings. MAKE IT REALLY SHORT.`;
