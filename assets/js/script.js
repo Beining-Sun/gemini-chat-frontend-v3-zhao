@@ -115,19 +115,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Generate PMF Analysis
-            const pmfPrompt = `Generate a Product-Market Fit (PMF) analysis for a business in the ${industry} industry targeting ${audience} in ${region}. Include sections for Market Demand, Consumer Behavior, and Competitive Landscape. Format the response in markdown with clear headings and bullet points.`;
+            const pmfPrompt = `Generate a Product-Market Fit (PMF) analysis for a business in the ${industry} industry targeting ${audience} in ${region}. Include sections for Market Demand, Consumer Behavior, and Competitive Landscape. Format the response in markdown with clear headings and bullet points. Keep it concise.`;
             const pmfResult = await model.generateContent(pmfPrompt);
             const pmfText = await pmfResult.response.text();
             document.getElementById('pmf-analysis').innerHTML = marked.parse(pmfText);
             
             // Generate Case Studies
-            const caseStudyPrompt = `Provide 2-3 relevant case studies of successful businesses in the ${industry} industry targeting ${audience} in ${region}. For each case study, include the company name, key strategies, and lessons learned. Format the response in markdown with clear headings.`;
+            const caseStudyPrompt = `Provide 2-3 relevant case studies of successful businesses in the ${industry} industry targeting ${audience} in ${region}. For each case study, include the company name, key strategies, and lessons learned. Format the response in markdown with clear headings. Keep it concise.`;
             const caseStudyResult = await model.generateContent(caseStudyPrompt);
             const caseStudyText = await caseStudyResult.response.text();
             document.getElementById('case-studies').innerHTML = marked.parse(caseStudyText);
             
             // Generate Evaluation
-            const evaluationPrompt = `Evaluate the business idea of operating in ${industry} targeting ${audience} in ${region}. Provide a score out of 10 and detailed feedback on strengths, weaknesses, opportunities, and threats (SWOT analysis). Format the response in markdown with clear headings.`;
+            const evaluationPrompt = `Evaluate the business idea of operating in ${industry} targeting ${audience} in ${region}. Provide a score out of 10 and detailed feedback on strengths, weaknesses, opportunities, and threats (SWOT analysis). Format the response in markdown with clear headings. Keep it concise.`;
             const evaluationResult = await model.generateContent(evaluationPrompt);
             const evaluationText = await evaluationResult.response.text();
             document.getElementById('evaluation').innerHTML = marked.parse(evaluationText);
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
             8. Expansion & Future Growth
             9. Conclusion & Next Steps
             
-            Format the response in markdown with clear headings and subheadings. Include bullet points for lists and ensure the content is professional and detailed.`;
+            Format the response in markdown with clear headings and subheadings. Include bullet points for lists and ensure the content is professional and detailed. Keep it concise.`;
             
             const planResult = await model.generateContent(planPrompt);
             const planText = await planResult.response.text();
